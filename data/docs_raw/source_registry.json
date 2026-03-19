@@ -1,0 +1,34 @@
+[
+  {
+    "source_id": "src_001",
+    "title": "Know Your Customer Guidance, Accessible Version",
+    "source_type": "gov_uk_webpage",
+    "category": "customer_guidance",
+    "url": "https://www.gov.uk/government/publications/know-your-customer-guidance/know-your-customer-guidance-accessible-version",
+    "file_name": null
+  },
+  {
+    "source_id": "src_002",
+    "title": "UK Financial Sanctions General Guidance",
+    "source_type": "gov_uk_webpage",
+    "category": "financial_sanctions_guidance",
+    "url": "https://www.gov.uk/government/publications/financial-sanctions-general-guidance/uk-financial-sanctions-general-guidance",
+    "file_name": null
+  },
+  {
+    "source_id": "src_003",
+    "title": "Assessing and Reducing the Risk of Money Laundering Through the Markets (MLTM)",
+    "source_type": "pdf_document",
+    "category": "money_laundering_risk_guidance",
+    "url": null,
+    "file_name": "Assessing and reducing the risk of Money Laundering Through the Markets (MLTM).pdf"
+  },
+  {
+    "source_id": "src_004",
+    "title": "Corporate Transparency and Register Reform White Paper",
+    "source_type": "pdf_document",
+    "category": "corporate_transparency",
+    "url": null,
+    "file_name": "Corporate Transparency and Register Reform White Paper.pdf"
+  }
+]
