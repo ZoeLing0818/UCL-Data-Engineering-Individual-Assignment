@@ -1,22 +1,37 @@
 # LLM-Assisted Risk Review Support Prototype for UK Business Entities
 
-## Overview
+## Project Overview
 
-This project develops an LLM-assisted risk review support prototype for UK business entities.  
-The system combines structured registry data from Companies House, official API enrichment, curated policy guidance documents, and lightweight retrieval to support analyst-facing review notes.
+This project develops an LLM-assisted risk review support prototype for UK business entities. It combines structured Companies House registry data, official API enrichment, curated policy guidance, and lightweight retrieval to generate analyst-facing review-support notes.
 
-Rather than functioning as a predictive risk model or compliance decision engine, the prototype is designed to support prioritisation, interpretation, and manual review. It transforms raw registry data into structured review signals, enriches selected cases with additional official context, retrieves relevant policy snippets, and generates review-support notes using Gemini with a rule-based fallback path.
+The prototype is designed to support prioritisation and interpretation rather than to make legal, regulatory, or compliance determinations. Its main goal is to show how a multi-source data-engineering workflow can be used to transform raw registry data into structured review outputs and grounded LLM-generated notes.
 
-## Key Features
+## Core Components
 
-- Structured entity master construction from Companies House bulk data
-- Transparent rule-based review signal engineering
-- Selective Companies House API enrichment for prioritised entities
-- Document ingestion and storage of curated guidance materials
-- LLM-assisted review-note generation with Gemini
-- Rule-based fallback review-note generation
-- Lightweight RAG using section-level policy chunks
-- Spark-based summary layer for scalable aggregation
+- **Entity master construction** from Companies House bulk data
+- **Rule-based risk signal engineering** for prioritisation
+- **Selective Companies House API enrichment** for official contextual support
+- **Document ingestion** of curated policy and guidance materials
+- **LLM-assisted review-note generation** using Gemini
+- **Rule-based fallback notes** for robustness and interpretability
+- **Lightweight RAG enhancement** using section-level policy chunks
+- **Spark-based summary layer** for scalable aggregation
+
+## Data Sources
+
+- **Companies House bulk CSV**  
+  Primary structured source for the entity universe and entity master table
+
+- **Companies House API**  
+  Supplementary official enrichment source for selected review candidates
+
+- **Curated Markdown guidance files**  
+  - `entity_review_policy.md`
+  - `risk_flag_guidelines.md`
+  - `manual_review_checklist.md`
+
+- **Source provenance metadata**  
+  Stored in `source_registry.json`
 
 ## Project Structure
 
@@ -50,11 +65,10 @@ artifacts/
     ├── rag_review_outputs_summary.csv
     └── retrieved_chunks_summary.csv
 
-notebooks/
-├── 01_entity_master_build.ipynb
-├── 02_risk_signal_engineering.ipynb
-├── 03_online_enrichment_source.ipynb
-├── 04_document_ingestion.ipynb
-├── 05_retrieval_and_review_support.ipynb
-├── 06_spark_entity_summary.ipynb
-└── 07_rag_review_enhancement.ipynb
+01_entity_master_build.ipynb
+02_risk_signal_engineering.ipynb
+03_online_enrichment_source.ipynb
+04_document_ingestion.ipynb
+05_retrieval_and_review_support.ipynb
+06_spark_entity_summary.ipynb
+07_rag_review_enhancement.ipynb
