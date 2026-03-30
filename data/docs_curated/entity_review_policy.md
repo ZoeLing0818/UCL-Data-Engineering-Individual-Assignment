@@ -1,7 +1,9 @@
 # Entity Review Policy
 
 ## Purpose
-This document defines the review policy for the prototype risk review support system for operational entity monitoring.
+This document defines how the prototype risk review support system prioritises entities for further review.
+
+
 
 The system is designed to support prioritisation and screening, not to produce definitive legal, regulatory, or criminal determinations. Any entity classified as `High`, `Medium`, or `Low` priority should be interpreted as a review-support output rather than a final judgement.
 
